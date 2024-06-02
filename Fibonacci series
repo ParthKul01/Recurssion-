@@ -1,0 +1,9 @@
+#Python code for finding addition of  fibonacci series upto a defined limit .
+def fibbonacci(num):
+    if(num==0):
+        return 0
+    if(num==1):
+        return 1
+    else:
+        return fibbonacci(num-1) + fibbonacci(num-2)
+fibbonacci(30)
