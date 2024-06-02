@@ -1,0 +1,7 @@
+#Python code for recursion
+def find(num):
+    if(num==1):  #Base Case
+        return 2
+    else:
+        return 2*find(num-1)  #Recurssive Call and Simple Calulation 
+find(4)
