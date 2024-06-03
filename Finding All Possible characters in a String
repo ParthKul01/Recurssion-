@@ -1,0 +1,14 @@
+def helper(s, temp, index):
+    if index == len(s):
+        print(temp)
+        return
+    
+    # Take Condition: Include current character
+    helper(s, temp + s[index], index + 1)
+    
+    # Not Take Condition: Exclude current character
+    helper(s, temp, index + 1)
+
+# Input string from user
+s = input("Enter a string: ")
+helper(s, "", 0)
