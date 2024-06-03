@@ -1,0 +1,10 @@
+def change(s,start,end):
+    if(start>=end): #Base Case
+        return s
+    s[start],s[end] =s[end],s[start]
+    return change(s,start+1,end-1) #Recurssive Statement 
+
+st = input("Enter a String ")
+l = list(st)
+length = len(l)
+change(l,0,length-1)
