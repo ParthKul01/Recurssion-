@@ -1,0 +1,17 @@
+def helper(l, temp, index):
+    if len(l) == index:
+        print(temp)
+        return
+    
+
+    # Include the current element and move to the next
+    temp.append(l[index])
+    helper(l, temp, index + 1)
+    
+    # Exclude the current element and move to the next
+    temp.pop()
+    helper(l, temp, index + 1)
+
+l = list(input("Enter 3 values"))
+temp = []
+helper(l, temp, 0)
