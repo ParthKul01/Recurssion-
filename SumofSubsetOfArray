@@ -1,0 +1,12 @@
+def helper(arr,sum1,tempsum,i):
+    if sum1== sum(tempsum): #Base Condition 
+        print(tempsum)
+       
+    if i>=len(arr):    #Base Condition 
+        return False
+    
+    return  helper(arr,sum1,tempsum.copy() +[arr[i]],i+1)  or  helper(arr,sum1,tempsum,i+1)  #Recurssive Call
+      
+    
+arr = [1,2,3,6]
+helper(arr,9,[],0) 
