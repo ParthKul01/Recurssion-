@@ -1,0 +1,10 @@
+def helper(num2,exp):
+    if exp==1:   #Base Condition 
+        return num2
+    
+    return num2 * helper(num2,exp-1)  #Recurssive Call 
+
+num = int(input("Enter a Number"))
+exp = int(input("Enter the power of number"))
+
+helper(num,exp)
